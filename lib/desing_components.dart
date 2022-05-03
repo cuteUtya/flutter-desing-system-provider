@@ -259,7 +259,6 @@ class TabItem {
 }
 
 enum ButtonSize {
-  extraSmall,
   small,
   medium,
   large,
