@@ -23,7 +23,7 @@ class ColorData {
     required this.purple,
   });
 
-  final MaterialColor accent;
+  final ColorTones accent;
 
   /// ## Spectrum
   /// * gray50, gray75, gray100 and gray200 used for background layers
@@ -35,29 +35,66 @@ class ColorData {
   /// * gray700 subdued text, subdued icon
   /// * gray800 text, icon
   /// * gray900 heading
-  late MaterialColor gray;
+  late ColorTones gray;
 
   /// ## Spectrum
   /// Negative semantic
-  late MaterialColor red;
+  late ColorTones red;
 
   /// ## Spectrum
   /// Notice semantic
-  late MaterialColor orange;
-  late MaterialColor yellow;
-  late MaterialColor chartreuse;
+  late ColorTones orange;
+  late ColorTones yellow;
+  late ColorTones chartreuse;
 
   /// ## Spectrum
   /// Positive semantic
-  late MaterialColor green;
-  late MaterialColor celery;
-  late MaterialColor seafoam;
+  late ColorTones green;
+  late ColorTones celery;
+  late ColorTones seafoam;
 
   /// ## Spectrum
   /// Informative, accent semantic
-  late MaterialColor blue;
-  late MaterialColor indigo;
-  late MaterialColor purple;
-  late MaterialColor fuchsia;
-  late MaterialColor magenta;
+  late ColorTones blue;
+  late ColorTones indigo;
+  late ColorTones purple;
+  late ColorTones fuchsia;
+  late ColorTones magenta;
+}
+
+class ColorTones extends ColorSwatch<int> {
+  const ColorTones(int primary, Map<int, Color> swatch)
+      : super(primary, swatch);
+
+  Color get shade50 => this[50]!;
+
+  Color get shade75 => this[75]!;
+
+  Color get shade100 => this[100]!;
+
+  Color get shade200 => this[200]!;
+
+  Color get shade300 => this[300]!;
+
+  Color get shade400 => this[400]!;
+
+  Color get shade500 => this[500]!;
+
+  Color get shade600 => this[600]!;
+
+  Color get shade700 => this[700]!;
+
+  Color get shade800 => this[800]!;
+
+  Color get shade900 => this[900]!;
+
+  Color get shade1000 => this[1000]!;
+
+  Color get shade1100 => this[1100]!;
+
+  Color get shade1200 => this[1200]!;
+
+  Color get shade1300 => this[1300]!;
+
+  Color get shade1400 => this[1400]!;
 }
