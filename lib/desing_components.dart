@@ -244,9 +244,15 @@ abstract class ComponentsData {
 }
 
 class ActionItem {
-  const ActionItem({required this.icon, required this.onClick});
-  final IconData icon;
-  final VoidCallback onClick;
+  const ActionItem({
+    this.icon,
+    this.label,
+    this.onClick,
+  });
+
+  final IconData? icon;
+  final String? label;
+  final VoidCallback? onClick;
 }
 
 class TabItem {
