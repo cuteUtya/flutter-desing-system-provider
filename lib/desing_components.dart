@@ -1,3 +1,4 @@
+import 'package:design_system_provider/desing_colors.dart';
 import 'package:flutter/material.dart';
 
 abstract class ComponentsData {
@@ -86,7 +87,7 @@ abstract class ComponentsData {
     String title,
     String body,
     IconData icon,
-    MaterialColor color,
+    ColorTones color,
     List<Widget> buttons,
   });
 
@@ -94,14 +95,14 @@ abstract class ComponentsData {
     IconData icon,
     String text,
     Widget button,
-    MaterialColor color,
+    ColorTones color,
     bool autoDismiss = true,
   });
 
   Widget tooltip({
     String text,
     IconData? icon,
-    MaterialColor color,
+    ColorTones color,
   });
 
   Widget checkBox({
@@ -243,9 +244,15 @@ abstract class ComponentsData {
 }
 
 class ActionItem {
-  const ActionItem({required this.icon, required this.onClick});
-  final IconData icon;
-  final VoidCallback onClick;
+  const ActionItem({
+    this.icon,
+    this.label,
+    this.onClick,
+  });
+
+  final IconData? icon;
+  final String? label;
+  final VoidCallback? onClick;
 }
 
 class TabItem {
@@ -259,7 +266,6 @@ class TabItem {
 }
 
 enum ButtonSize {
-  extraSmall,
   small,
   medium,
   large,
